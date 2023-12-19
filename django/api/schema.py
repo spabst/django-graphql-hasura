@@ -45,7 +45,7 @@ class CreateUser(graphene.Mutation):
         token = get_token(user)
         refresh_token = create_refresh_token(user)
         
-        return CreateUser(user=user, profile=profile_obj, token=token, refresh_token=refresh_token)
+        return CreateUser(user=user, profile=profile_obj, token=str(token), refresh_token=refresh_token)
     
 # Finalize creating mutation for schema
 class Mutation(graphene.ObjectType):

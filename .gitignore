@@ -28,3 +28,5 @@ django/static/*
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+postgres-data/
